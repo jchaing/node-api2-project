@@ -1,5 +1,5 @@
 const express = require('express');
-const postsRouter = require('./routes/posts-router');
+const postsRouter = require('./router/posts-router');
 
 const server = express();
 
