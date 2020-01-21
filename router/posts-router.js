@@ -44,7 +44,7 @@ router.get('/:id', (req, res) => {
 router.get('/:id/comments', (req, res) => {
   const { id } = req.params;
 
-  db.findCommentById(id)
+  db.findPostComments(id)
     .then(comments => {
       comments.length > 0
         ? res.status(200).json(comments)
@@ -59,5 +59,13 @@ router.get('/:id/comments', (req, res) => {
       });
     });
 });
+
+/***** POST *****/
+
+// When the client makes a POST request to /api/posts:
+
+// router.post('/', (req, res) => {
+
+// })
 
 module.exports = router;
